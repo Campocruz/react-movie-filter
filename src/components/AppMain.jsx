@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import movieList from "../assets/data/movieList"
 import MainSelectList from "./MainSelectList";
 import MainMovieList from "./MainMovielist";
+import FormInputText from "./FormInputText";
 export default function AppMain() {
 
   const [selcetGenre, setSelectGenre] = useState("null")
@@ -9,6 +10,11 @@ export default function AppMain() {
 
   function selectedGenre(e) {
     setSelectGenre(e.target.value)
+  }
+
+  function findTitle(inputTitle) {
+    const filteredTitle = movieList.filter((movie) => movie.title.toLowerCase() === inputTitle.toLowerCase())
+    setRenderList(filteredTitle)
   }
 
   useEffect(() => {
@@ -27,6 +33,9 @@ export default function AppMain() {
           <div className="row">
             <div className="col-md-2">
               <MainSelectList movieList={movieList} onSelectedGenre={selectedGenre} />
+            </div>
+            <div className="col-md-2">
+              <FormInputText onFindTitle={findTitle} />
             </div>
           </div>
         </section>
