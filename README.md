@@ -4,7 +4,7 @@
 Create un nuovo progetto React e implementate un sistema di filtro per una lista di film in base al genere.
 
 L'array dei film è già fornito: 
-
+```
  [
    { title: 'Inception', genre: 'Fantascienza' },
    { title: 'Il Padrino', genre: 'Thriller' },
@@ -13,7 +13,7 @@ L'array dei film è già fornito:
  { title: 'Interstellar', genre: 'Fantascienza' },
    { title: 'Pulp Fiction', genre: 'Thriller' },
  ]
- 
+ ```
 
 
 Dovrete utilizzare lo stato e useEffect per gestire il filtraggio dinamico.
