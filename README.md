@@ -10,7 +10,7 @@ L'array dei film è già fornito:
    { title: 'Il Padrino', genre: 'Thriller' },
    { title: 'Titanic', genre: 'Romantico' },
    { title: 'Batman', genre: 'Azione' },
- { title: 'Interstellar', genre: 'Fantascienza' },
+   { title: 'Interstellar', genre: 'Fantascienza' },
    { title: 'Pulp Fiction', genre: 'Thriller' },
  ]
  ```
