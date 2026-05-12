@@ -28,7 +28,7 @@ export default function AppMain() {
   return (
     <>
       <div className="container">
-        <section>
+        <section className="text-center">
           <MainFilterBox onSetRenderList={setRenderList} onSetSelectGenre={setSelectGenre} movieList={movieList} />
         </section>
 

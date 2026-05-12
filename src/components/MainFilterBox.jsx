@@ -18,7 +18,7 @@ export default function MainFilterBox({ onSetSelectGenre, onSetRenderList, movie
 
   return (
     <>
-      <div className="row">
+      <div className="row d-flex justify-content-center m-4">
         <div className="col-md-2">
           <MainSelectList movieList={movieList} onSelectedGenre={selectedGenre} />
         </div>
