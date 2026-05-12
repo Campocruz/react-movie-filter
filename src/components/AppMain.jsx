@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import movieList from "../assets/data/movieList"
+import initMovieList from "../assets/data/movieList"
 import MainMovieList from "./MainMovielist";
 import MainFilterBox from "./MainFilterBox";
+import AppFormAddItem from "./AppFormAddItem";
 export default function AppMain() {
+
+  const movieList = initMovieList
 
   const [selcetGenre, setSelectGenre] = useState("null")
   const [renderList, setRenderList] = useState([])
@@ -15,6 +18,12 @@ export default function AppMain() {
       setRenderList(filteredList)
     }
   }, [selcetGenre])
+
+
+  function addNewMovie(e, newMovie) {
+    e.preventDefault()
+    setRenderList(() => [...movieList, newMovie])
+  }
 
   return (
     <>
@@ -34,6 +43,9 @@ export default function AppMain() {
                   <MainMovieList movieList={renderList} />
                 </div>
               </div>
+            </div>
+            <div className="col">
+              <AppFormAddItem onFormSubmit={addNewMovie} />
             </div>
           </div>
         </section>

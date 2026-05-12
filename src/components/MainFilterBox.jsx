@@ -11,7 +11,7 @@ export default function MainFilterBox({ onSetSelectGenre, onSetRenderList, movie
     if (inputTitle === "") {
       onSetRenderList(movieList)
     } else {
-      const filteredTitle = movieList.filter((movie) => movie.title.toLowerCase() === inputTitle.toLowerCase())
+      const filteredTitle = movieList.filter((movie) => movie.title.toLowerCase().includes(inputTitle.toLowerCase()))
       onSetRenderList(filteredTitle)
     }
   }
